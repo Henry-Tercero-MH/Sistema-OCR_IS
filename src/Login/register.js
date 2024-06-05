@@ -67,15 +67,6 @@ function Register() {
       if (!response.ok) {
         throw new Error("Error al registrar usuario");
       }
-
-      // Esperar a que la respuesta se complete antes de intentar acceder a su contenido
-      const userData = await response.json();
-
-      // if (userData.message === "Usuario registrado exitosamente") {
-      //   navigate("/login");
-      // } else {
-      //   mostrarAlerta("Error al registrar usuario");
-      // }
     } catch (error) {
       console.error("Error al registrar usuario:", error);
       // mostrarAlerta(
