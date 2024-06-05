@@ -1,0 +1,311 @@
+body {
+  padding: 100px;
+  margin-bottom: 200px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #61dafb;
+  width: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.App {
+  text-align: left;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+html {
+  background-image: url(./imagenes/istockphoto-1460508804-2048x2048.jpg);
+}
+
+header {
+  background-color: yellowgreen;
+  width: 100%;
+  height: 50px;
+}
+.container {
+}
+.box-videoEscaner {
+  .container {
+    width: 500px;
+    height: 600px;
+  }
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-video {
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  width: 220px;
+  height: 220px;
+  margin-top: 50px;
+  background-image: url("imagenes/pngwing.com.png");
+  background-position: center;
+  background-size: contain;
+  box-shadow: 20px 15px 15px black;
+  margin: 10px auto;
+  overflow: hidden; /* Para recortar cualquier parte del video que se desborde */
+}
+
+.card-video video {
+  width: 100%; /* Ajusta el ancho del video al 100% del contenedor */
+  height: 100%; /* Ajusta la altura del video al 100% del contenedor */
+  object-fit: cover; /* Ajusta el video al tamaño del contenedor manteniendo su relación de aspecto */
+  border-radius: 10px;
+}
+
+.scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 2px; /* Grosor de la línea */
+  background-color: red;
+  animation: scanAnimation 2s infinite alternate; /* Animación que hace que la línea suba y baje */
+  flex-direction: row;
+  display: flex;
+}
+
+.btn-capturar {
+  margin-top: 20px;
+  width: 120px;
+  height: 50px;
+  background-color: #000;
+  font-family: sans-serif;
+  font-size: 20px;
+  border-radius: 15px;
+
+  color: aliceblue;
+}
+.btn-capturar:hover {
+  box-shadow: -15px -15px 20px rgba(215, 212, 212, 0.5);
+  border-color: goldenrod;
+}
+.btn-scanner {
+  margin-top: 20px;
+  width: 120px;
+  height: 50px;
+  background-color: #030d29fb;
+  font-family: sans-serif;
+  font-size: 20px;
+  border-radius: 15px;
+  color: aliceblue;
+}
+.btn-scanner:hover {
+  box-shadow: -15px -15px 20px rgba(215, 212, 212, 0.5);
+  border-color: goldenrod;
+}
+.btn-pdf {
+  margin-top: 20px;
+  width: 120px;
+  height: 50px;
+  background-color: #590d56fb;
+  font-family: sans-serif;
+  font-size: 20px;
+  border-radius: 15px;
+}
+.btn-pdf:hover {
+  box-shadow: -15px -15px 20px rgba(215, 212, 212, 0.5);
+  border-color: goldenrod;
+}
+.btn-salir {
+  margin-top: 20px;
+  width: 120px;
+  height: 50px;
+  background-color: #590d56fb;
+  font-family: sans-serif;
+  font-size: 20px;
+  border-radius: 15px;
+  color: aliceblue;
+}
+.video-cam {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Establece un fondo semitransparente */
+}
+.video-container {
+  position: absolute;
+}
+.video-container {
+  position: fixed; /* Hace que el contenedor permanezca fijo en la pantalla */
+  top: 0; /* Ajusta la posición superior si es necesario */
+  left: 0; /* Ajusta la posición izquierda si es necesario */
+  width: 100%; /* Ajusta el ancho si es necesario */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+.video-container {
+  /* background-color: aquamarine; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.content {
+  margin-top: 100px; /* Ajusta esto a la altura real de .video-container */
+}
+
+.content {
+  margin-top: 100px; /* Ajusta esto a la altura real de .video-container */
+}
+
+@keyframes scanAnimation {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+.tabla {
+  margin: 100px auto;
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.tabla h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 34px;
+  color: rgb(249, 243, 243);
+}
+
+.tabla th,
+.tabla td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla th {
+  background-color: rgba(241, 241, 241, 0.8);
+  color: rgb(29, 27, 27);
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.tabla tr:hover {
+  background-color: rgba(241, 241, 241, 0.5);
+}
+
+.tabla tr:nth-child(even) {
+  background-color: rgba(241, 241, 241, 0.5);
+}
+
+.tabla td {
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+.tabla td:first-child {
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+.tabla textarea {
+  width: 80%;
+  margin: 20px auto;
+  display: block;
+  padding: 10px;
+  border: 1px solid hsla(0, 0%, 80%, 0.674);
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+}
+
+.imagen-capturada {
+  width: 300px; /* Ancho del contenedor */
+  height: 200px; /* Altura del contenedor */
+  overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+}
+
+.i9magen-capturada img {
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
+  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor manteniendo su relación de aspecto */
+}
+
+.container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  flex: 1;
+  margin-left: 30px; /* Ajusta el margen izquierdo según sea necesario */
+}
+
+.contenedor-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    width: 80%;
+  }
+  .tabla {
+    width: 80%;
+  }
+}
