@@ -11,7 +11,7 @@ export const isValidPassword = (password) => {
   const uppercaseRegex = /[A-Z]/;
   const lowercaseRegex = /[a-z]/;
   const digitRegex = /[0-9]/;
-  const specialCharRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+  const specialCharRegex = /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]+/;
 
   // Verificar la longitud mínima
   if (password.length < minLength) {
