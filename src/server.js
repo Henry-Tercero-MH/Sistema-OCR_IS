@@ -10,7 +10,7 @@ app.use(cors());
 
 // Configuración de la conexión a la base de datos
 const connection = mysql.createConnection({
-  host: "www.cotimedic.shop",
+  host: "srv1354.hstgr.io",
   user: "u942816017_root",
   password: "A0B1C1D1E1f.",
   database: "u942816017_farmacia",
