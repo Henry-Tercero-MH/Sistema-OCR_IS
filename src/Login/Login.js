@@ -33,7 +33,7 @@ function Login() {
 
     try {
       const response = await fetch(
-        `http://localhost:3001/api/user?email=${encodeURIComponent(
+        `https://cotimedic-e4710026b227.herokuapp.com/api/user?email=${encodeURIComponent(
           email
         )}&password=${encodeURIComponent(password)}`
       );
