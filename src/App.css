@@ -56,7 +56,8 @@ code {
 }
 
 html {
-  background-image: url(./imagenes/istockphoto-1460508804-2048x2048.jpg);
+  /* background-image: url(./imagenes/istockphoto-1460508804-2048x2048.jpg); */
+  background-color: darkblue;
 }
 
 header {
